@@ -1,0 +1,15 @@
+<div class ="title">
+  <h1>WatchList</h1>
+</div>
+
+<div>
+  <h2>My Lists</h2>
+  <% @lists.each do |e| %>
+  <%= link_to e.name, list_path(e) %>
+  <% end %>
+</div>
+<div>
+  <li class="add-list">
+  <%= link_to "Add list", new_list_path, class: "btn btn-primary"%>
+  </li>
+</div>
